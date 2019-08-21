@@ -34,8 +34,8 @@ class OptimizedQuerySetMixin(object):
     def get_serializer_context(self):
         context = super(OptimizedQuerySetMixin, self).get_serializer_context()
 
-        fields_name = getattr(settings, 'REST_FRAMEWORK_JSONMASK_FIELDS_NAME', constants.FIELDS_NAME)
-        excludes_name = getattr(settings, 'REST_FRAMEWORK_JSONMASK_EXCLUDES_NAME', constants.EXCLUDES_NAME)
+        fields_name = getattr(settings, 'DRF_JSONMASK_FIELDS_NAME', constants.FIELDS_NAME)
+        excludes_name = getattr(settings, 'DRF_JSONMASK_EXCLUDES_NAME', constants.EXCLUDES_NAME)
 
         if fields_name in self.request.GET and excludes_name in self.request.GET:
             raise exceptions.ParseError(
@@ -51,12 +51,12 @@ class OptimizedQuerySetMixin(object):
 
     @cached_property
     def requested_fields(self):
-        fields_name = getattr(settings, 'REST_FRAMEWORK_JSONMASK_FIELDS_NAME', constants.FIELDS_NAME)
+        fields_name = getattr(settings, 'DRF_JSONMASK_FIELDS_NAME', constants.FIELDS_NAME)
         return parse_fields(self.request.GET.get(fields_name))
 
     @cached_property
     def excluded_fields(self):
-        excludes_name = getattr(settings, 'REST_FRAMEWORK_JSONMASK_EXCLUDES_NAME', constants.EXCLUDES_NAME)
+        excludes_name = getattr(settings, 'DRF_JSONMASK_EXCLUDES_NAME', constants.EXCLUDES_NAME)
         return parse_fields(self.request.GET.get(excludes_name))
 
     def optimize_queryset(self, queryset):

@@ -1,6 +1,5 @@
 from __future__ import unicode_literals
 
-from django.utils.functional import cached_property
 from jsonmask import should_include_variable
 
 from .utils import collapse_includes_excludes
@@ -8,7 +7,7 @@ from .utils import collapse_includes_excludes
 
 class FieldsListSerializerMixin(object):
 
-    @cached_property
+    @property
     def _readable_fields(self):
         readable_fields = super(FieldsListSerializerMixin, self)._readable_fields
         return self.prune_readable_fields(readable_fields)
