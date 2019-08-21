@@ -9,8 +9,8 @@ from . import constants
 def extract_json_mask_from_request(request):
     includes, excludes = {}, {}
 
-    excludes_name = getattr(settings, 'REST_FRAMEWORK_JSONMASK_EXCLUDES_NAME', constants.EXCLUDES_NAME)
-    fields_name = getattr(settings, 'REST_FRAMEWORK_JSONMASK_FIELDS_NAME', constants.FIELDS_NAME)
+    excludes_name = getattr(settings, 'DRF_JSONMASK_EXCLUDES_NAME', constants.EXCLUDES_NAME)
+    fields_name = getattr(settings, 'DRF_JSONMASK_FIELDS_NAME', constants.FIELDS_NAME)
 
     if fields_name in request.GET:
         includes = parse_fields(request.GET[fields_name])

@@ -6,12 +6,12 @@ import sys
 
 from setuptools import setup
 
-name = 'djangorestframework-jsonmask'
-package = 'rest_framework_jsonmask'
-description = 'Implements Google\'s partial response in Django RestFramework'
-url = 'https://github.com/zapier/django-rest-framework-jsonmask'
-author = 'Craig Labenz'
-author_email = 'craig.labenz@zapier.com'
+name = 'drf-jsonmask'
+package = 'drf_jsonmask'
+description = "Implements Google\'s partial response in Django RestFramework (Fork from Zapier's package)"
+url = 'https://github.com/jllorencetti/drf-jsonmask'
+author = 'Craig Labenz, João Luiz Lorencetti (Fork author)'
+author_email = "jll.linux@gmail.com",
 license = 'BSD'
 
 
@@ -75,13 +75,14 @@ setup(
     name=name,
     version=version,
     url=url,
-    download_url="https://github.com/zapier/django-rest-framework-jsonmask/tarball/{0}".format(version),
     license=license,
     description=description,
     long_description=get_long_description(package),
     long_description_content_type='text/markdown',
     author=author,
     author_email=author_email,
+    maintainer=author,
+    maintainer_email=author_email,
     packages=get_packages(package),
     package_data=get_package_data(package),
     install_requires=[
@@ -96,14 +97,12 @@ setup(
         'Framework :: Django :: 1.11',
         'Framework :: Django :: 2.0',
         'Framework :: Django :: 2.1',
+        'Framework :: Django :: 2.2',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
         'Natural Language :: English',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Topic :: Internet :: WWW/HTTP',

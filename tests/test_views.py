@@ -241,7 +241,7 @@ class TestPerformance(DataMixin, TestCase):
 
 class TestSettings(DataMixin, TestCase):
 
-    @override_settings(REST_FRAMEWORK_JSONMASK_FIELDS_NAME='asdf')
+    @override_settings(DRF_JSONMASK_FIELDS_NAME='asdf')
     def test_old_fields_name(self):
         url = reverse('ticket-list')
         resp = self.client.get(url + '?fields=title,body')
@@ -249,7 +249,7 @@ class TestSettings(DataMixin, TestCase):
         self.assertIn('author', resp.json()[0])
         self.assertIn('comments', resp.json()[0])
 
-    @override_settings(REST_FRAMEWORK_JSONMASK_FIELDS_NAME='asdf')
+    @override_settings(DRF_JSONMASK_FIELDS_NAME='asdf')
     def test_override_fields_name(self):
         url = reverse('ticket-list')
         resp = self.client.get(url + '?asdf=title,body')
@@ -257,7 +257,7 @@ class TestSettings(DataMixin, TestCase):
         self.assertNotIn('author', resp.json()[0])
         self.assertNotIn('comments', resp.json()[0])
 
-    @override_settings(REST_FRAMEWORK_JSONMASK_EXCLUDES_NAME='asdf')
+    @override_settings(DRF_JSONMASK_EXCLUDES_NAME='asdf')
     def test_old_excludes_name(self):
         url = reverse('ticket-list')
         resp = self.client.get(url + '?excludes=title,body')
@@ -265,7 +265,7 @@ class TestSettings(DataMixin, TestCase):
         self.assertIn('title', resp.json()[0])
         self.assertIn('body', resp.json()[0])
 
-    @override_settings(REST_FRAMEWORK_JSONMASK_EXCLUDES_NAME='asdf')
+    @override_settings(DRF_JSONMASK_EXCLUDES_NAME='asdf')
     def test_override_excludes_name(self):
         url = reverse('ticket-list')
         resp = self.client.get(url + '?asdf=title,body')
