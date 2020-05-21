@@ -13,10 +13,7 @@ from .serializers import (  # CommentSerializer,; UserSerializer,
 )
 
 
-class TicketViewSet(OptimizedQuerySetMixin, viewsets.ReadOnlyModelViewSet):
-    queryset = Ticket.objects.all()
-    serializer_class = TicketSerializer
-
+class OptimizedTicketViewSetMixin(OptimizedQuerySetMixin):
     @data_predicate('author')
     def load_author(self, queryset):
         return queryset.prefetch_related('author')
@@ -28,6 +25,11 @@ class TicketViewSet(OptimizedQuerySetMixin, viewsets.ReadOnlyModelViewSet):
     @data_predicate('comments.author')
     def load_comment_authors(self, queryset):
         return queryset.prefetch_related('comments__author')
+
+
+class TicketViewSet(OptimizedTicketViewSetMixin, viewsets.ReadOnlyModelViewSet):
+    queryset = Ticket.objects.all()
+    serializer_class = TicketSerializer
 
 
 class RawViewSet(rest_views.APIView):

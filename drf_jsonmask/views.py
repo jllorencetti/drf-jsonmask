@@ -12,7 +12,14 @@ from .utils import collapse_includes_excludes
 class OptimizedQuerySetBase(type):
     def __new__(cls, name, bases, attrs):
         new_cls = super(OptimizedQuerySetBase, cls).__new__(cls, name, bases, attrs)
-        new_cls._data_predicates = new_cls.extract_data_predicates(attrs)
+
+        data_predicates = {}
+        for base in bases:
+            if hasattr(base, '_data_predicates'):
+                data_predicates.update(getattr(base, '_data_predicates'))
+
+        data_predicates.update(new_cls.extract_data_predicates(attrs))
+        new_cls._data_predicates = data_predicates
         return new_cls
 
     def extract_data_predicates(cls, attrs):
