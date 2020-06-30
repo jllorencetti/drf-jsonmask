@@ -272,3 +272,9 @@ class TestSettings(DataMixin, TestCase):
         self.assertEqual(resp.status_code, 200)
         self.assertNotIn('title', resp.json()[0])
         self.assertNotIn('body', resp.json()[0])
+
+    @override_settings(DRF_JSONMASK_FIELDS_NAME='asdf', DRF_JSONMASK_EXCLUDES_NAME='lkjh')
+    def test_override_field_name_and_excludes_name(self):
+        url = reverse('ticket-list')
+        resp = self.client.get(url + '?asdf=title,body&lkjh=author,comments')
+        self.assertEqual(resp.status_code, 400)
