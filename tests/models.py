@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 
 from django.conf import settings
 from django.db import models
-from django.utils.encoding import python_2_unicode_compatible
 
 
 class BaseModel(models.Model):
@@ -14,7 +13,6 @@ class BaseModel(models.Model):
         abstract = True
 
 
-@python_2_unicode_compatible
 class Ticket(BaseModel):
     title = models.CharField(max_length=255)
     body = models.TextField()
@@ -34,7 +32,6 @@ class Ticket(BaseModel):
         return self.title
 
 
-@python_2_unicode_compatible
 class Comment(BaseModel):
     ticket = models.ForeignKey(Ticket, on_delete=models.deletion.CASCADE, related_name='comments')
     body = models.TextField()

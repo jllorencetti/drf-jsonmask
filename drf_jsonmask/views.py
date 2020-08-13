@@ -1,7 +1,6 @@
 from __future__ import unicode_literals
 
 from django.conf import settings
-from django.utils import six
 from django.utils.functional import cached_property
 from jsonmask import parse_fields, should_include_variable
 from rest_framework import exceptions
@@ -25,8 +24,7 @@ class OptimizedQuerySetBase(type):
         return data_predicates
 
 
-@six.add_metaclass(OptimizedQuerySetBase)
-class OptimizedQuerySetMixin(object):
+class OptimizedQuerySetMixin(object, metaclass=OptimizedQuerySetBase):
     """
     Allows a Google Partial Response query param like to prune results
     """
