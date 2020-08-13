@@ -1,9 +1,10 @@
 from __future__ import unicode_literals
 
+from rest_framework import response, views as rest_views, viewsets
+
 from drf_jsonmask.decorators import data_predicate
 from drf_jsonmask.utils import apply_json_mask_from_request
 from drf_jsonmask.views import OptimizedQuerySetMixin
-from rest_framework import response, views as rest_views, viewsets
 
 from .models import Ticket
 

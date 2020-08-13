@@ -1,8 +1,9 @@
 from __future__ import unicode_literals
 
 from django.contrib.auth import get_user_model
-from drf_jsonmask.serializers import FieldsListSerializerMixin
 from rest_framework import serializers
+
+from drf_jsonmask.serializers import FieldsListSerializerMixin
 
 from .models import Comment, Ticket
 
