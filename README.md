@@ -12,8 +12,8 @@ Implements Google's Partial Response in Django RestFramework.
 
 ## Requirements
 
-* Python (3.6, 3.7)
-* Django (1.11, 2.0, 2.1)
+* Python (3.6, 3.7, 3.8)
+* Django (1.11, 2.0, 2.1, 2.2, 3.0)
 
 ## Installation
 
