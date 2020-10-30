@@ -1,13 +1,13 @@
 from rest_framework import response, views as rest_views, viewsets
 
 from drf_jsonmask.decorators import data_predicate
-from drf_jsonmask.utils import apply_json_mask_from_request
 from drf_jsonmask.views import OptimizedQuerySetMixin
 
 from .models import Ticket
 from .serializers import (  # CommentSerializer,; UserSerializer,
     TicketSerializer,
 )
+from .utils import apply_json_mask_from_request
 
 
 class OptimizedCommentsViewSetMixin(OptimizedQuerySetMixin):
@@ -30,7 +30,6 @@ class TicketViewSet(OptimizedCommentsViewSetMixin, viewsets.ReadOnlyModelViewSet
 
 
 class RawViewSet(rest_views.APIView):
-
     def get(self, request, *args, **kwargs):
         data = {
             'a': 'test',
