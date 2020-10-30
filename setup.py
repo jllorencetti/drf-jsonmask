@@ -89,8 +89,8 @@ setup(
     package_data=get_package_data(package),
     install_requires=[
         'jsonmask',
-        'Django>=1.11',
-        'djangorestframework>=3.5',
+        'Django>=1.11,<3.2',
+        'djangorestframework>=3.8,<3.13',
     ],
     classifiers=[
         'Development Status :: 4 - Beta',
