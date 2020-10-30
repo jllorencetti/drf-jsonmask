@@ -1,5 +1,3 @@
-from __future__ import unicode_literals
-
 from rest_framework import response, views as rest_views, viewsets
 
 from drf_jsonmask.decorators import data_predicate

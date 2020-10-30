@@ -1,5 +1,3 @@
-from __future__ import unicode_literals
-
 from django.conf import settings
 from jsonmask import apply_json_mask, parse_fields
 
