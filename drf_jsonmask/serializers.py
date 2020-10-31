@@ -1,5 +1,3 @@
-from __future__ import unicode_literals
-
 from jsonmask import should_include_variable
 
 from .utils import collapse_includes_excludes

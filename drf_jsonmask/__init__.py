@@ -1,5 +1,3 @@
-from __future__ import unicode_literals
-
 """Package for drf-jsonmask"""
 
 __project__ = "drf_jsonmask"
