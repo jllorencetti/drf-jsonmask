@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
 import os
 import re
 import sys
@@ -87,8 +89,8 @@ setup(
     package_data=get_package_data(package),
     install_requires=[
         'jsonmask',
-        'Django>=1.11',
-        'djangorestframework>=3.5',
+        'Django>=1.11,<3.2',
+        'djangorestframework>=3.8,<3.13',
     ],
     classifiers=[
         'Development Status :: 4 - Beta',
@@ -98,13 +100,17 @@ setup(
         'Framework :: Django :: 2.0',
         'Framework :: Django :: 2.1',
         'Framework :: Django :: 2.2',
+        'Framework :: Django :: 3.0',
+        'Framework :: Django :: 3.1',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
         'Natural Language :: English',
-        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3 :: Only',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Software Development :: Libraries :: Python Modules'
     ]
