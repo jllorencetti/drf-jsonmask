@@ -6,8 +6,8 @@ def data_predicate(*field_names):
         fnc._data_function_predicates = field_names
 
         @wraps(fnc)
-        def inner(self, queryset):
-            return fnc(self, queryset)
+        def inner(self, *args, **kwargs):
+            return fnc(self, *args, **kwargs)
 
         return inner
 
