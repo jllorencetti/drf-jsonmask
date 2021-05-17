@@ -89,7 +89,7 @@ setup(
     package_data=get_package_data(package),
     install_requires=[
         'jsonmask',
-        'Django>=1.11,<3.2',
+        'Django>=1.11,<3.3',
         'djangorestframework>=3.8,<3.13',
     ],
     classifiers=[
@@ -102,6 +102,7 @@ setup(
         'Framework :: Django :: 2.2',
         'Framework :: Django :: 3.0',
         'Framework :: Django :: 3.1',
+        'Framework :: Django :: 3.2',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
