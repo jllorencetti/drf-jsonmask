@@ -89,16 +89,13 @@ setup(
     package_data=get_package_data(package),
     install_requires=[
         'jsonmask',
-        'Django>=1.11,<4.1',
+        'Django>=2.2,<4.1',
         'djangorestframework>=3.8,<3.14',
     ],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
         'Framework :: Django',
-        'Framework :: Django :: 1.11',
-        'Framework :: Django :: 2.0',
-        'Framework :: Django :: 2.1',
         'Framework :: Django :: 2.2',
         'Framework :: Django :: 3.0',
         'Framework :: Django :: 3.1',

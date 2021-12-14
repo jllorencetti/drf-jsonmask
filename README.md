@@ -13,7 +13,7 @@ Implements Google's Partial Response in Django REST Framework.
 ## Requirements
 
 * Python (3.6, 3.7, 3.8, 3.9)
-* Django (1.11, 2.0, 2.1, 2.2, 3.0, 3.1)
+* Django (2.2, 3.0, 3.1)
 * Django REST framework (3.8, 3.9, 3.10, 3.11, 3.12)
 
 ## Installation
