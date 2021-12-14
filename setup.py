@@ -89,8 +89,8 @@ setup(
     package_data=get_package_data(package),
     install_requires=[
         'jsonmask',
-        'Django>=1.11,<3.3',
-        'djangorestframework>=3.8,<3.13',
+        'Django>=1.11,<4.1',
+        'djangorestframework>=3.8,<3.14',
     ],
     classifiers=[
         'Development Status :: 4 - Beta',
@@ -103,6 +103,7 @@ setup(
         'Framework :: Django :: 3.0',
         'Framework :: Django :: 3.1',
         'Framework :: Django :: 3.2',
+        'Framework :: Django :: 4.0',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
@@ -112,6 +113,7 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Software Development :: Libraries :: Python Modules'
     ]
