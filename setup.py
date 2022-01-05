@@ -90,7 +90,7 @@ setup(
     install_requires=[
         'jsonmask',
         'Django>=2.2,<4.1',
-        'djangorestframework>=3.8,<3.14',
+        'djangorestframework>=3.10,<3.14',
     ],
     classifiers=[
         'Development Status :: 4 - Beta',
