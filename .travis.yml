@@ -1,11 +1,11 @@
+os: linux
 dist: focal
-sudo: false
 language: python
 env:
 - TOXENV=flake8
 - TOXENV=isort
 cache: pip
-matrix:
+jobs:
   fast_finish: true
   include:
   - python: 3.6
