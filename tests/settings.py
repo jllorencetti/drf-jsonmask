@@ -1,6 +1,7 @@
 SECRET_KEY = 'not-secret-anymore'
 
 TIME_ZONE = 'UTC'
+USE_TZ = True
 
 DATABASES = {
     'default': {
@@ -17,3 +18,5 @@ INSTALLED_APPS = [
     'drf_jsonmask',
     'tests',
 ]
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
