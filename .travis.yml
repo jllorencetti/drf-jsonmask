@@ -2,130 +2,118 @@ os: linux
 dist: focal
 language: python
 env:
-- TOXENV=flake8
-- TOXENV=isort
+  - TOXENV=flake8
+  - TOXENV=isort
 cache: pip
 jobs:
   fast_finish: true
   include:
-  - python: 3.6
-    env: TOXENV=py36-2.2-drf3.10
-  - python: 3.6
-    env: TOXENV=py36-2.2-drf3.11
-  - python: 3.6
-    env: TOXENV=py36-2.2-drf3.12
-  - python: 3.6
-    env: TOXENV=py36-2.2-drf3.13
-  - python: 3.6
-    env: TOXENV=py36-3.0-drf3.11
-  - python: 3.6
-    env: TOXENV=py36-3.0-drf3.12
-  - python: 3.6
-    env: TOXENV=py36-3.0-drf3.13
-  - python: 3.6
-    env: TOXENV=py36-3.1-drf3.11
-  - python: 3.6
-    env: TOXENV=py36-3.1-drf3.12
-  - python: 3.6
-    env: TOXENV=py36-3.1-drf3.13
-  - python: 3.6
-    env: TOXENV=py36-3.2-drf3.11
-  - python: 3.6
-    env: TOXENV=py36-3.2-drf3.12
-  - python: 3.6
-    env: TOXENV=py36-3.2-drf3.13
-  - python: 3.7
-    env: TOXENV=py37-2.2-drf3.10
-  - python: 3.7
-    env: TOXENV=py37-2.2-drf3.11
-  - python: 3.7
-    env: TOXENV=py37-2.2-drf3.12
-  - python: 3.7
-    env: TOXENV=py37-2.2-drf3.13
-  - python: 3.7
-    env: TOXENV=py37-3.0-drf3.11
-  - python: 3.7
-    env: TOXENV=py37-3.0-drf3.12
-  - python: 3.7
-    env: TOXENV=py37-3.0-drf3.13
-  - python: 3.7
-    env: TOXENV=py37-3.1-drf3.11
-  - python: 3.7
-    env: TOXENV=py37-3.1-drf3.12
-  - python: 3.7
-    env: TOXENV=py37-3.1-drf3.13
-  - python: 3.7
-    env: TOXENV=py37-3.2-drf3.11
-  - python: 3.7
-    env: TOXENV=py37-3.2-drf3.12
-  - python: 3.7
-    env: TOXENV=py37-3.2-drf3.13
-  - python: 3.8
-    env: TOXENV=py38-2.2-drf3.10
-  - python: 3.8
-    env: TOXENV=py38-2.2-drf3.11
-  - python: 3.8
-    env: TOXENV=py38-2.2-drf3.12
-  - python: 3.8
-    env: TOXENV=py38-2.2-drf3.13
-  - python: 3.8
-    env: TOXENV=py38-3.0-drf3.11
-  - python: 3.8
-    env: TOXENV=py38-3.0-drf3.12
-  - python: 3.8
-    env: TOXENV=py38-3.0-drf3.13
-  - python: 3.8
-    env: TOXENV=py38-3.1-drf3.11
-  - python: 3.8
-    env: TOXENV=py38-3.1-drf3.12
-  - python: 3.8
-    env: TOXENV=py38-3.1-drf3.13
-  - python: 3.8
-    env: TOXENV=py38-3.2-drf3.11
-  - python: 3.8
-    env: TOXENV=py38-3.2-drf3.12
-  - python: 3.8
-    env: TOXENV=py38-3.2-drf3.13
-  - python: 3.9
-    env: TOXENV=py39-2.2-drf3.10
-  - python: 3.9
-    env: TOXENV=py39-2.2-drf3.11
-  - python: 3.9
-    env: TOXENV=py39-2.2-drf3.12
-  - python: 3.9
-    env: TOXENV=py39-2.2-drf3.13
-  - python: 3.9
-    env: TOXENV=py39-3.0-drf3.11
-  - python: 3.9
-    env: TOXENV=py39-3.0-drf3.12
-  - python: 3.9
-    env: TOXENV=py39-3.0-drf3.13
-  - python: 3.9
-    env: TOXENV=py39-3.1-drf3.11
-  - python: 3.9
-    env: TOXENV=py39-3.1-drf3.12
-  - python: 3.9
-    env: TOXENV=py39-3.1-drf3.13
-  - python: 3.9
-    env: TOXENV=py39-3.2-drf3.11
-  - python: 3.9
-    env: TOXENV=py39-3.2-drf3.12
-  - python: 3.9
-    env: TOXENV=py39-3.2-drf3.13
-  - python: 3.9
-    env: TOXENV=py39-4.0-drf3.13
-  - python: 3.10.0
-    env: TOXENV=py310-3.2-drf3.11
-  - python: 3.10.0
-    env: TOXENV=py310-3.2-drf3.12
-  - python: 3.10.0
-    env: TOXENV=py310-3.2-drf3.13
-  - python: 3.10.0
-    env: TOXENV=py310-4.0-drf3.13
+    - python: 3.7
+      env: TOXENV=py37-2.2-drf3.10
+    - python: 3.7
+      env: TOXENV=py37-2.2-drf3.11
+    - python: 3.7
+      env: TOXENV=py37-2.2-drf3.12
+    - python: 3.7
+      env: TOXENV=py37-2.2-drf3.13
+    - python: 3.7
+      env: TOXENV=py37-3.0-drf3.11
+    - python: 3.7
+      env: TOXENV=py37-3.0-drf3.12
+    - python: 3.7
+      env: TOXENV=py37-3.0-drf3.13
+    - python: 3.7
+      env: TOXENV=py37-3.1-drf3.11
+    - python: 3.7
+      env: TOXENV=py37-3.1-drf3.12
+    - python: 3.7
+      env: TOXENV=py37-3.1-drf3.13
+    - python: 3.7
+      env: TOXENV=py37-3.2-drf3.11
+    - python: 3.7
+      env: TOXENV=py37-3.2-drf3.12
+    - python: 3.7
+      env: TOXENV=py37-3.2-drf3.13
+    - python: 3.8
+      env: TOXENV=py38-2.2-drf3.10
+    - python: 3.8
+      env: TOXENV=py38-2.2-drf3.11
+    - python: 3.8
+      env: TOXENV=py38-2.2-drf3.12
+    - python: 3.8
+      env: TOXENV=py38-2.2-drf3.13
+    - python: 3.8
+      env: TOXENV=py38-3.0-drf3.11
+    - python: 3.8
+      env: TOXENV=py38-3.0-drf3.12
+    - python: 3.8
+      env: TOXENV=py38-3.0-drf3.13
+    - python: 3.8
+      env: TOXENV=py38-3.1-drf3.11
+    - python: 3.8
+      env: TOXENV=py38-3.1-drf3.12
+    - python: 3.8
+      env: TOXENV=py38-3.1-drf3.13
+    - python: 3.8
+      env: TOXENV=py38-3.2-drf3.11
+    - python: 3.8
+      env: TOXENV=py38-3.2-drf3.12
+    - python: 3.8
+      env: TOXENV=py38-3.2-drf3.13
+    - python: 3.8
+      env: TOXENV=py38-4.0-drf3.13
+    - python: 3.8
+      env: TOXENV=py38-4.0-drf3.14
+    - python: 3.8
+      env: TOXENV=py38-4.1-drf3.14
+    - python: 3.9
+      env: TOXENV=py39-2.2-drf3.10
+    - python: 3.9
+      env: TOXENV=py39-2.2-drf3.11
+    - python: 3.9
+      env: TOXENV=py39-2.2-drf3.12
+    - python: 3.9
+      env: TOXENV=py39-2.2-drf3.13
+    - python: 3.9
+      env: TOXENV=py39-3.0-drf3.11
+    - python: 3.9
+      env: TOXENV=py39-3.0-drf3.12
+    - python: 3.9
+      env: TOXENV=py39-3.0-drf3.13
+    - python: 3.9
+      env: TOXENV=py39-3.1-drf3.11
+    - python: 3.9
+      env: TOXENV=py39-3.1-drf3.12
+    - python: 3.9
+      env: TOXENV=py39-3.1-drf3.13
+    - python: 3.9
+      env: TOXENV=py39-3.2-drf3.11
+    - python: 3.9
+      env: TOXENV=py39-3.2-drf3.12
+    - python: 3.9
+      env: TOXENV=py39-3.2-drf3.13
+    - python: 3.9
+      env: TOXENV=py39-4.0-drf3.13
+    - python: 3.8
+      env: TOXENV=py39-4.0-drf3.14
+    - python: 3.8
+      env: TOXENV=py39-4.1-drf3.14
+    - python: 3.10.0
+      env: TOXENV=py310-3.2-drf3.11
+    - python: 3.10.0
+      env: TOXENV=py310-3.2-drf3.12
+    - python: 3.10.0
+      env: TOXENV=py310-3.2-drf3.13
+    - python: 3.10.0
+      env: TOXENV=py310-4.0-drf3.13
+    - python: 3.10.0
+      env: TOXENV=py310-4.0-drf3.14
+    - python: 3.10.0
+      env: TOXENV=py310-4.1-drf3.14
 
 install:
-- pip install tox coveralls
+  - pip install tox coveralls
 script:
-- tox
+  - tox
 after_success:
-- if [ -f .coverage ]; then coveralls; fi
+  - if [ -f .coverage ]; then coveralls; fi
