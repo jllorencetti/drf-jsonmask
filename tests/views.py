@@ -4,9 +4,7 @@ from drf_jsonmask.decorators import data_predicate
 from drf_jsonmask.views import OptimizedQuerySetMixin
 
 from .models import Ticket
-from .serializers import (  # CommentSerializer,; UserSerializer,
-    TicketSerializer,
-)
+from .serializers import TicketSerializer  # CommentSerializer,; UserSerializer,
 from .utils import apply_json_mask_from_request
 
 
