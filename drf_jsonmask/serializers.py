@@ -3,11 +3,11 @@ from jsonmask import should_include_variable
 from .utils import collapse_includes_excludes
 
 
-class FieldsListSerializerMixin(object):
+class FieldsListSerializerMixin:
 
     @property
     def _readable_fields(self):
-        readable_fields = super(FieldsListSerializerMixin, self)._readable_fields
+        readable_fields = super()._readable_fields
         return self.prune_readable_fields(readable_fields)
 
     def prune_readable_fields(self, readable_fields):
