@@ -7,7 +7,7 @@ name = "drf-jsonmask"
 dynamic = ["version"]
 description = "Implements Google's partial response in Django RestFramework (Fork from Zapier's package)"
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.8"
 authors = [
     { name = "Craig Labenz", email = "craig.labenz@zapier.com" },
     { name = "João Luiz Lorencetti", email = "jll.linux@gmail.com" },
@@ -20,31 +20,25 @@ classifiers = [
     "Development Status :: 4 - Beta",
     "Environment :: Web Environment",
     "Framework :: Django",
-    "Framework :: Django :: 2.2",
-    "Framework :: Django :: 3.0",
-    "Framework :: Django :: 3.1",
-    "Framework :: Django :: 3.2",
-    "Framework :: Django :: 4.0",
-    "Framework :: Django :: 4.1",
     "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: BSD License",
     "Operating System :: OS Independent",
     "Natural Language :: English",
     "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.6",
-    "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Topic :: Internet :: WWW/HTTP",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
     "jsonmask",
-    "django>=2.2,<4.1",
-    "djangorestframework>=3.10,<3.14",
+    "django>=4.2",
+    "djangorestframework>=3.14",
 ]
 
 [project.urls]

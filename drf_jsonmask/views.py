@@ -9,7 +9,7 @@ from .utils import collapse_includes_excludes
 
 class OptimizedQuerySetBase(type):
     def __new__(cls, name, bases, attrs):
-        new_cls = super(OptimizedQuerySetBase, cls).__new__(cls, name, bases, attrs)
+        new_cls = super().__new__(cls, name, bases, attrs)
 
         data_predicates = {}
         for base in bases:
@@ -29,20 +29,20 @@ class OptimizedQuerySetBase(type):
         return data_predicates
 
 
-class OptimizedQuerySetMixin(object, metaclass=OptimizedQuerySetBase):
+class OptimizedQuerySetMixin(metaclass=OptimizedQuerySetBase):
     """
     Allows a Google Partial Response query param like to prune results
     """
 
     def get_serializer_context(self):
-        context = super(OptimizedQuerySetMixin, self).get_serializer_context()
+        context = super().get_serializer_context()
 
         fields_name = getattr(settings, 'DRF_JSONMASK_FIELDS_NAME', constants.FIELDS_NAME)
         excludes_name = getattr(settings, 'DRF_JSONMASK_EXCLUDES_NAME', constants.EXCLUDES_NAME)
 
         if fields_name in self.request.GET and excludes_name in self.request.GET:
             raise exceptions.ParseError(
-                detail='Cannot provide both "%s" and "%s"' % (fields_name, excludes_name,)
+                detail='Cannot provide both "{}" and "{}"'.format(fields_name, excludes_name)
             )
 
         if fields_name in self.request.GET:
@@ -87,5 +87,5 @@ class OptimizedQuerySetMixin(object, metaclass=OptimizedQuerySetBase):
         return queryset
 
     def get_queryset(self):
-        queryset = super(OptimizedQuerySetMixin, self).get_queryset()
+        queryset = super().get_queryset()
         return self.optimize_queryset(queryset)

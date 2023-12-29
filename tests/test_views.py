@@ -5,10 +5,10 @@ from django.urls import reverse
 from . import factories, views
 
 
-class DataMixin(object):
+class DataMixin:
 
     def setUp(self):
-        super(DataMixin, self).setUp()
+        super().setUp()
 
         self.t1 = factories.TicketFactory()
         self.t1c1 = factories.CommentFactory(
@@ -170,7 +170,7 @@ class TestViews(DataMixin, TestCase):
 class TestPerformance(DataMixin, TestCase):
 
     def setUp(self):
-        super(TestPerformance, self).setUp()
+        super().setUp()
 
         self.rf = RequestFactory()
 
